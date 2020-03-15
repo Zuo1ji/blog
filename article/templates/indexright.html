@@ -1,0 +1,23 @@
+<div class="right">
+    {% include 'recommend.html'%}
+    <div class="sidebar-info mdui-shadow-10">
+        <ul class="mdui-list">
+            <div class="sidebar-reply-title">标签</div>
+            <li class="mdui-divider mdui-m-y-0"></li>
+            <div class="mdui-row-xs-2">
+                {% for tags in taglist %}
+                <div class="mdui-col">
+                    <a href="{% url 'article:article_list' %}?tag={{ tags.name }}" target="_blank">
+                        <li class="mdui-list-item mdui-ripple sidebar-reply-list">
+                            <div class="sidebar-reply-text">{{tags.name}}</div>
+                        </li>
+                    </a>
+                </div>
+                {% endfor%}
+
+            </div>
+        </ul>
+    </div>
+
+    
+</div>

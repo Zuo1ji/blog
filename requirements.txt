@@ -1,0 +1,8 @@
+Django==2.2
+django-taggit==1.2.0
+Jinja2==2.11.1
+Markdown==3.2.1
+Pillow==7.0.0
+pyecharts==1.7.0
+requests==2.23.0
+

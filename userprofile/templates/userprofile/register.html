@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% load staticfiles %}
+{% block title %} login {% endblock title %}
+{% block content %}
+{% include 'indexright.html'%}
+
+<div class="left">
+    <div class="mdui-card page-card mdui-shadow-10 page">
+        <div class="mdui-card-media">
+            <div class="page-img" data-original="https://img.zuo1ji.cn/20200314205705.jpg-cut"></div>
+        </div>
+        <div class="mdui-card-primary page-primary">
+            <div class="mdui-card-primary-title">
+                <center>
+                    <h3 class="mdui-card-primary-title">
+                        <a href="/userprofile/login/"><small>Login</small></a> <small>or</small> <a
+                            href="/userprofile/register/">Join</a>
+                    </h3>
+                </center>
+            </div>
+
+        </div>
+        <div class="mdui-card-content page-content">
+            <hr>
+            <h1 class="page-title">由于个人原因，注册暂停开放</h1>
+        </div>
+        <br><br>
+
+    </div>
+</div>
+{% endblock content %}

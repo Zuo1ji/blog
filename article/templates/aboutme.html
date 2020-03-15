@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% load staticfiles %}
+{% block title %} login {% endblock title %}
+{% block content %}
+<div class="right">
+    {% include 'recommend.html'%}
+
+</div>
+<div class="left">
+    <div class="mdui-card page-card mdui-shadow-10 page">
+        <div class="mdui-card-media">
+            <div class="page-img" data-original="https://img.zuo1ji.cn/20200314205701.jpg-cut"></div>
+        </div>
+        <div class="mdui-card-primary page-primary">
+            <div class="mdui-card-primary-title">
+                <center>
+                    <h3 class="mdui-card-primary-title">
+                        About Me & My Blog
+                    </h3>
+                </center>
+            </div>
+
+        </div>
+        <div class="mdui-card-content page-content">
+            <hr>
+            <p>不知道写啥就先占个位置吧</p>
+        </div>
+        <br><br>
+
+    </div>
+</div>
+{% endblock content %}

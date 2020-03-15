@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<div class="mdui-appbar mdui-shadow-0">
+    <div class="mdui-toolbar">
+        <a href="/about" class="mdui-typo-title" title="about me">Zuo1ji</a>
+        <a href="/" class="mdui-typo-title">Homepage</a>
+        <div class="mdui-toolbar-spacer"></div>
+        <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+            <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                    class="mdui-icon material-icons">search</i></button>
+            <form id="search" method="post" action="http://typecho.233baidu.com/" role="search">
+                <input class="mdui-textfield-input" type="text" id="s" name="s" placeholder="搜索一下">
+                <button type="submit" style="display:none;">搜索</button>
+            </form>
+            <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                    class="mdui-icon material-icons">close</i></button>
+        </div>
+        {% if user.is_authenticated %}
+        <a href='{% url "userprofile:logout" %}' title="logout">
+            {{ user.username }}
+        </a>
+        {% else %}
+        <a href="{% url 'userprofile:login' %}">
+            Login
+        </a>
+        {% endif %}
+
+    </div>
+</div>

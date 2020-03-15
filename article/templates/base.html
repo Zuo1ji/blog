@@ -1,0 +1,52 @@
+{% load staticfiles %}
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdui.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/iconfont.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tocbot.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cuckoo.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nprogress.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/atom-one-dark.min.css' %}">
+    <script src="{% static 'js/nprogress.min.js' %}"></script>
+    <script src="{% static 'js/tocbot.min.js' %}"></script>
+
+    <style>
+        .footer {
+            height: 50px;
+            background: url();  
+        }
+        .body {
+            background-image: url("https://img.zuo1ji.cn/20200314205707.jpg");
+        }
+    </style>
+</head>
+
+<body class="body mdui-loaded" id="body"></body>
+
+{% include 'header.html' %}
+<div class="container">
+
+    {% block content %}{% endblock content %}
+</div>
+<button class="mdui-fab mdui-fab-fixed mdui-ripple top mdui-color-theme-accent"><i class="mdui-icon material-icons">arrow_upward</i></button>
+{% include 'footer.html' %}
+
+<script src="{% static 'js/mdui.min.js' %}"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.pjax.min.js' %}"></script>
+<script src="{% static 'js/jquery.ias.min.js' %}"></script>
+<script src="{% static 'js/jquery.lazyload.min.js' %}"></script>
+<script src="{% static 'js/highlight.min.js' %}"></script>
+<script src="{% static 'js/cuckoo.min.js' %}"></script>
+
+</body>
+
+</html>

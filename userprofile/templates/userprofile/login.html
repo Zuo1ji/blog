@@ -1,0 +1,42 @@
+{% extends "base.html" %} {% load staticfiles %}
+{% block title %} login {% endblock title %}
+{% block content %}
+{% include 'indexright.html'%}
+
+<div class="left">
+    <div class="mdui-card page-card mdui-shadow-10 page">
+        <div class="mdui-card-media">
+            <div class="page-img" data-original="https://img.zuo1ji.cn/20200314205705.jpg-cut"></div>
+        </div>
+        <div class="mdui-card-primary page-primary">
+            <div class="mdui-card-primary-title">
+                <center>
+                    <h3 class="mdui-card-primary-title"><a href="/userprofile/login/">Login </a><small>or</small><a
+                            href="/userprofile/register/"><small> Join</small></a></h3>
+                </center>
+            </div>
+
+        </div>
+        <div class="mdui-card-content page-content">
+            <form method="post" action="#" role="form">
+                {% csrf_token %}
+                <div class="mdui-textfield comment-middle">
+                    <label class="mdui-textfield-label">username</label>
+                    <input class="mdui-textfield-input" type="text" name="username" value="" required>
+                </div>
+
+                <div class="mdui-textfield comment-middle">
+                    <label class="mdui-textfield-label">password</label>
+                    <input class="mdui-textfield-input" type="password" name="password" required>
+                </div>
+                <center>
+                    <button type="submit" id="submit"
+                        class="mdui-btn mdui-btn-block mdui-text-color-theme mdui-ripple submit">login</button>
+                </center>
+            </form>
+        </div>
+        <br><br>
+
+    </div>
+</div>
+{% endblock content %}
